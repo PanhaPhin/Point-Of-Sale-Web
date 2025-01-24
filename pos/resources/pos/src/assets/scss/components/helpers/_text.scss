@@ -1,0 +1,51 @@
+@import "../variables";
+
+@each $name, $color in $theme-colors-palette {
+    .text-#{$name} {
+        color: $color !important;
+    }
+}
+
+@each $name, $color in $theme-colors {
+    .text-hover-#{$name} {
+        &:hover {
+            color: $color !important;
+        }
+    }
+}
+
+// Cursor pointer
+.cursor-pointer {
+    cursor: pointer;
+}
+
+// Cursor default
+.cursor-default {
+    cursor: default;
+}
+
+.fs-small {
+    font-size: $font-small;
+}
+
+.fs-1-xl {
+    font-size: $font-big;
+}
+
+.fs-1-xxl {
+    font-size: $font-bigger;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fs-xl-6 {
+    @media (max-width: 1499px) {
+        font-size: 14px !important;
+    }
+}
+
+.svg-inline--fa  {
+    vertical-align: middle;
+}

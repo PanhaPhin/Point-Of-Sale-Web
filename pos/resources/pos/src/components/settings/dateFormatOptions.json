@@ -1,0 +1,38 @@
+[
+    {
+        "label": "DD-MM-YYYY",
+        "value": "d-m-y"
+    },
+    {
+        "label": "MM-DD-YYYY",
+        "value": "m-d-y"
+    },
+    {
+        "label": "YYYY-MM-DD",
+        "value": "y-m-d"
+    },
+    {
+        "label": "MM/DD/YYYY",
+        "value": "m/d/y"
+    },
+    {
+        "label": "DD/MM/YYYY",
+        "value": "d/m/y"
+    },
+    {
+        "label": "YYYY/MM/DD",
+        "value": "y/m/d"
+    },
+    {
+        "label": "MM.DD.YYYY",
+        "value": "m.d.y"
+    },
+    {
+        "label": "DD.MM.YYYY",
+        "value": "d.m.y"
+    },
+    {
+        "label": "YYYY.MM.DD",
+        "value": "y.m.d"
+    }
+]

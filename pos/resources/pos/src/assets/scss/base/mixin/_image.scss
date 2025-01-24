@@ -1,0 +1,8 @@
+@import "breakpoints";
+
+@mixin image-size($size) {
+    img {
+        width: $size;
+        height: $size;
+    }
+}

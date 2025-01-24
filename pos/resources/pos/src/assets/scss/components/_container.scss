@@ -1,0 +1,21 @@
+@import "variables";
+@import "../base/mixin/breakpoints";
+@import "../base/functions/get";
+
+// Containers
+@include media-breakpoint-up(lg) {
+    .container,
+    .container-fluid {
+        padding: 0  get($content-spacing, desktop);
+    }
+}
+
+// Tablet & mobile modes
+@include media-breakpoint-down(lg) {
+    // Containers
+    .container,
+    .container-fluid {
+        max-width: none;
+        padding: 0 get($content-spacing, tablet-and-mobile);
+    }
+}

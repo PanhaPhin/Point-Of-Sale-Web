@@ -1,0 +1,35 @@
+@import "../../base/mixin/breakpoints";
+@import "../variables";
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+        .flex#{$infix}-root {
+            flex: 1;
+        }
+
+        .flex#{$infix}-column-auto {
+            flex: none;
+        }
+
+        .flex#{$infix}-column-fluid {
+            flex: 1 0 auto;
+        }
+
+        .flex#{$infix}-row-auto {
+            flex: 0 0 auto;
+        }
+
+        .flex#{$infix}-row-fluid {
+            flex: 1 auto;
+            min-width: 0;
+        }
+    }
+}
+
+.flex-equal {
+    flex-grow: 1;
+    flex-basis: 0;
+    flex-shrink: 0;
+}

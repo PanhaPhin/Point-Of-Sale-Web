@@ -1,0 +1,89 @@
+@import "../components/variables";
+
+body, html {
+    height: 100%;
+}
+
+body {
+    font-family: $primaryFont;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.313rem;
+    display: flex;
+    flex-direction: column;
+    background-color: $page-body-bg;
+}
+
+h1, h2 {
+    color: $gray-900;
+    font-weight: 500;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.wrapper {
+    @media (min-width: 1200px) {
+        transition: padding-left 0.3s ease;
+        padding-left: 16.563rem;
+    }
+}
+
+.theme-wrapper {
+    @media (min-width: 1200px) {
+        padding-top: 75px;
+    }
+}
+
+.collapsed-menu {
+    .wrapper {
+        padding-left: 5rem;
+    }
+}
+
+.icon-label {
+    width: 20px;
+    height: 20px;
+}
+
+.height-270 {
+    height: 270px;
+}
+
+.inner-scroll {
+    overflow-x: auto;
+}
+
+.box-shadow-none {
+    box-shadow: none;
+}
+
+.shadow-md {
+    box-shadow: $theme-box-shadow;
+}
+
+.width-540 {
+    max-width: 540px;
+    width: 100%;
+}
+
+.width-320 {
+    width: 320px;
+}
+
+.min-width-220 {
+    min-width: 220px;
+}
+
+.line {
+    width: calc(100% - 26px);
+    margin: auto;
+    background-color: $gray-300;
+    opacity: 1;
+}
+
+.custom-responsive .table-responsive{
+    overflow-x: unset !important;
+}

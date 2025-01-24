@@ -1,0 +1,24 @@
+@import "../../components/variables";
+
+.sweet-alert {
+    will-change: unset !important;
+    border-radius: 0.625rem !important;
+    background-color: $white !important;
+    width: 375px !important;
+
+    h2 {
+        color: #212529 !important;
+        font-size: 1.125rem !important;
+        font-weight: 500 !important;
+        margin-bottom: 13px !important;
+    }
+
+    .sweet-text {
+        font-size: 0.875rem !important;
+        color: #6C757D !important;
+    }
+
+    p {
+        flex-direction: row-reverse;
+    }
+}

@@ -1,0 +1,20 @@
+[
+    {
+        "label": "All",
+        "value": "0"
+    },
+    {
+        "label": "Piece",
+        "value": "1"
+    },
+    {
+        "label": "Meter",
+        "value": "2"
+    },
+    {
+        "label": "Kilogram",
+        "value": "3"
+    }
+]
+
+

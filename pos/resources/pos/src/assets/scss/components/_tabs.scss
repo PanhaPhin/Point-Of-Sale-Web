@@ -1,0 +1,54 @@
+@import "variables";
+@import "../base/mixin/overlay";
+
+.nav-pills {
+    .nav-item {
+        &:first-child .nav-link {
+            border-top-left-radius: 0.313rem;
+            border-bottom-left-radius: 0.313rem;
+        }
+
+        &:last-child .nav-link {
+            border-top-right-radius: 0.313rem;
+            border-bottom-right-radius: 0.313rem;
+        }
+    }
+
+    .nav-link {
+        background: $gray-200;
+        color: $gray-600;
+        border-radius: 0;
+        padding: 0.625rem 1.563rem 0.625rem 1.563rem;
+        font-size: 1rem;
+    }
+}
+
+.nav-tabs {
+    border-bottom: 0;
+
+    .nav-item {
+        .nav-link {
+            border: 0;
+            font-size: 1rem;
+            background-color: transparent;
+
+            &:after {
+                @include after-border-bottom
+            }
+
+            &.active {
+                &:after {
+                    border-bottom-color: $primary;
+                }
+            }
+        }
+
+        &:hover {
+            .nav-link {
+                &:after {
+                    border-bottom-color: $primary;
+                }
+            }
+        }
+    }
+}

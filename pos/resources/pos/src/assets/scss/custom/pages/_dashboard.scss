@@ -1,0 +1,79 @@
+@import "../../components/variables";
+
+//canvas {
+//    height:100% !important;
+//}
+
+.shortcut-btn{
+    font-size: 20px;
+    border-radius: 20% !important;
+}
+.shortcut-menu{
+    left: 0 !important;
+    top: 15px !important;
+    min-width: 225px !important;
+    a{
+        font-size: 15px !important;
+    }
+}
+.chart-dropdown  {
+    .dropdown-menu {
+        min-width: 87px !important;
+        transform: unset !important;
+        left: auto !important;
+        right: 16px !important;
+        top: 0 !important;
+        padding: 10px !important;
+    };
+}
+
+.pie-chart {
+        height: auto !important;
+        width: 320px !important;
+}
+
+.widget-bg-orange{
+            background-color: orange;
+            opacity: 1;
+}
+
+.bg-orange-700{
+    background-color: rgb(247 212 147 / 63%) !important;
+}
+
+.widget-bg-purple{
+    background-color: #6f42c1;
+    opacity: 1;
+}
+
+.bg-purple-700{
+    background-color: #bda4ea !important;
+}
+
+.widget-bg-pink{
+    background-color: #e83e8c;
+    opacity: 1;
+}
+
+.bg-pink-700{
+    background-color: #f4a9cb !important;
+}
+
+.widget-bg-red{
+    background-color: red;
+    opacity: 1;
+}
+
+.bg-red-700{
+    background-color: #f4a9cb !important;
+}
+
+.widget-bg-blue{
+    background-color: #00c6ff;
+    opacity: 1;
+}
+
+.widget-bg-blue-700{
+    background-color: #a9ecff !important;
+}
+

@@ -1,0 +1,28 @@
+@import "../components/variables";
+//@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
+
+//body {
+//    font-family: 'Poppins', sans-serif;
+//    font-weight: 400;
+//    font-size: 1rem;
+//}
+
+.z-index-1 {
+    z-index: 1;
+}
+
+.pos-screen {
+    background-color: rgb(0 158 247 / 5%) !important;
+
+    .btn {
+        border-radius: 0.625rem !important;
+    }
+
+    .modal-content {
+        border-radius: 20px;
+    }
+
+    .btn-secondary {
+        color: $white;
+    }
+}

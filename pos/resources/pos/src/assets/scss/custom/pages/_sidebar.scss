@@ -1,0 +1,173 @@
+@import "../../components/variables";
+@import "../../base/mixin";
+@import '~react-pro-sidebar/dist/scss/styles';
+
+.pro-sidebar {
+    @media (min-width: 992px) {
+        min-height: 100vh;
+        height: auto;
+    }
+
+    @media (max-width: 992px) {
+        position: fixed;
+        transition: 0.3s ease-in-out;
+        left: -270px;
+        overflow: auto;
+    }
+
+    .pro-sidebar-inner {
+        background-color: $white !important;
+
+        @media (max-width: 992px) {
+            min-height: 100vh;
+            height: auto;
+        }
+
+        .pro-sidebar-layout {
+            overflow-y: hidden;
+        }
+    }
+
+    .pro-menu {
+        padding: 0px !important;
+        &.sidebar-scrolling {
+            height: calc(100% - 70px);
+        }
+
+        .pro-menu-item {
+            .pro-inner-item {
+                border-left: 0.313rem solid transparent;
+                transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+                padding: 5px 20px 5px 18px;
+                font-size: .875rem;
+
+                &:hover {
+                    background-color: $primary-light;
+                    border-left: 0.313rem solid $primary !important;
+
+                    svg, .pro-item-content a {
+                        color: $gray-900;
+                    }
+                }
+            }
+
+            &.active {
+                .pro-inner-item {
+                    background-color: $primary-light;
+                    border-left: 0.313rem solid $primary !important;
+
+                    svg, .pro-item-content a {
+                        color: $gray-900;
+                    }
+                }
+            }
+
+            .pro-icon-wrapper {
+                margin-right: 4px !important;
+                margin-left: 0 !important;
+
+                .pro-icon {
+                    color: $gray-600;
+                    font-size: 0.875rem !important;
+                    animation: unset !important;
+                }
+            }
+
+            .pro-item-content {
+                a {
+                    color: $gray-600;
+                }
+            }
+
+
+            .pro-inner-list-item {
+                position: relative;
+                background-color: transparent !important;
+                padding: 0px !important;
+            }
+            .pro-inner-list-item ul {
+                padding: 0px !important;
+            }
+
+            .pro-inner-list-item .pro-inner-item {
+                padding: 10px 43px 10px 43px !important;
+            }
+            span.pro-item-content{
+                color: $gray-600;
+            }
+            .pro-inner-list-item ul span.pro-item-content{
+                padding-left: 10px !important;
+            }
+        }
+
+        .pro-menu-item.pro-sub-menu.pro-active-sub  > div > .pro-item-content{
+            // background-color: $primary-light;
+            color: $primary !important;
+        }
+        .pro-menu-item.pro-sub-menu.pro-active-sub  > div.pro-inner-item{
+            border-left: 0.313rem solid $primary !important;
+        }
+        .pro-menu-item.pro-sub-menu.pro-active-sub-search  > div{
+            background-color: $primary-light;
+        }
+
+    }
+
+}
+
+.pro-sidebar.collapsed .pro-menu>ul>.pro-menu-item.pro-sub-menu:hover{
+    .react-slidedown.pro-inner-list-item{
+        transition: visibility,transform .3s;
+        position: fixed;
+        left: 82px;
+        margin: 0px;
+        display: block !important;
+        color: $gray-600;
+        background-color: white !important;
+        border-radius: 5px;
+        margin-top: -44px;
+        box-shadow: 0 4px 20px 1px rgb(0 0 0 / 6%), 0 1px 4px rgb(0 0 0 / 8%) !important;
+        }
+}
+
+.react-slidedown {
+    transition-duration: 0.3s !important;
+}
+
+.notShow{
+    display: none;
+}
+
+.openMenu{
+    display: block !important;
+    height: auto !important;
+    transition-duration: 0.5s !important;
+}
+.closeMenu{
+    display: none !important;
+    height: 0px !important;
+    transition-duration: 0.5s !important;
+}
+
+
+.open-menu {
+    @media (max-width: 1199px) {
+        left: 0 !important;
+    }
+}
+
+.bg-overlay {
+    @media (max-width: 992px) {
+        @include bg-overly;
+    }
+}
+
+.header-active {
+    border-bottom: 2px solid $primary;
+    color: $black !important;
+}
+
+.header-tabs:hover, .header-tabs:focus {
+    color: $black !important;
+    border-bottom: 2px solid $primary;
+}

@@ -1,0 +1,18 @@
+[
+    {
+        "label": "Cash",
+        "value": 1
+    },
+    {
+        "label": "Cheque",
+        "value": 2
+    },
+    {
+        "label": "Bank Transfer",
+        "value": 3
+    },
+    {
+        "label": "Other",
+        "value": 4
+    }
+]

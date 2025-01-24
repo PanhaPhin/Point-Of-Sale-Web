@@ -1,0 +1,70 @@
+.barcode-main {
+    border: 1px solid #ccc;
+    display: block;
+    margin: 10px auto;
+    page-break-after: always;
+    padding: 0.1in;
+    width: 8.25in;
+
+    &__barcode-item {
+        border: 1px dotted #ccc;
+        display: block;
+        float: left;
+        font-size: 12px;
+        line-height: 14px;
+        overflow: hidden;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &__barcode-style {
+        padding: 0.04in;
+        width: 1.799in;
+
+        img {
+            height: 26px;
+            max-width: 80px;
+        }
+    }
+}
+
+.print-main {
+    height: 110px;
+    padding: 0.12in;
+
+    &__print1 {
+        width: 25%;
+        flex: 0 0 auto;
+    }
+
+    &__print2 {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+    }
+
+    &__print3 {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+    }
+
+    &__print4 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+
+    &__print5 {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+    }
+
+    &__print7 {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+    }
+
+    &__print8 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+}
+

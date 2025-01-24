@@ -1,0 +1,195 @@
+@import "../../components/variables";
+@import "~react-datepicker/dist/react-datepicker.css";
+
+.datepicker {
+    &__custom-datepicker {
+        width: 100%;
+        padding: 2.5px;
+        border-radius: 0.475rem;
+        height: 45px;
+        border: 1px solid $gray-400;
+        box-shadow: unset;
+        font-family: Poppins, Helvetica, "sans-serif";
+        font-weight: 500;
+        color: $gray-600;
+        font-size: 14px;
+        outline: none;
+        cursor: pointer;
+    }
+
+    .react-datepicker {
+        background-color: $white !important;
+        border: 0 !important;
+        border-radius: 0.475rem !important;
+        box-shadow: 0 0 50px 0 rgb(82 63 105 / 10%) !important;
+        font-family: inherit !important;
+
+        @media (max-width: 576px) {
+            right: 10px;
+        }
+
+        //&__input-container {
+        //    border: 1px solid #CED4DA !important;
+        //    border-radius: 7px;
+        //    height: 47px;
+        //}
+
+        &__header {
+            fill: #7e8299;
+            border-bottom: 0 !important;
+            background: transparent !important;
+            color: #7e8299;
+            height: 70px;
+            padding: 0.5rem 1rem 0 !important;
+            line-height: 1;
+            text-align: center !important;
+            position: relative !important;
+            user-select: none;
+            overflow: hidden;
+            flex: 1;
+            width: 281px;
+
+            @media (max-width: 576px) {
+                width: 261px !important;
+            }
+        }
+
+        &__current-month {
+            font-weight: 500 !important;
+            position: absolute;
+            left: 23.5%;
+            line-height: 1;
+            height: 34px;
+            display: inline-block;
+            text-align: center;
+            transform: translate3d(0, 0, 0);
+            padding: 7.48px 0 0 0;
+            font-size: 1rem !important;
+            color: #212529;
+            width: 145px;
+        }
+
+        &__day-names {
+            position: relative;
+            top: 20px;
+            background: 0 0;
+            text-align: center;
+            overflow: hidden;
+            display: flex;
+            margin-top: 20px;
+        }
+
+        &__day-name {
+            width: 36px !important;
+            height: 36px !important;
+            color: #3f4254;
+            font-size: 0;
+            font-weight: 600;
+        }
+
+        &__day-name:first-letter {
+            font-size: 14px;
+        }
+
+        &__triangle {
+            &:before {
+                content: none !important;
+            }
+
+            &:after {
+                content: none !important;
+            }
+        }
+
+        &__day {
+            box-shadow: none !important;
+            color: $gray-700;
+            margin: 0 !important;
+            line-height: 36px !important;
+            width: 35px !important;
+            height: 35px;
+            border-radius: 0.313rem;
+        }
+
+        &__navigation-icon {
+            top: 5px !important;
+
+            &:before {
+                border-width: 1px 1px 0 0 !important;
+            }
+        }
+
+        &__day--selected {
+            background: $cyan-100 !important;
+            color:$primary !important;
+        }
+
+        &__day--today {
+            font-weight: 400 !important;
+        }
+    }
+}
+
+.custom-dateRange-picker {
+    @media (min-width: 576px) {
+        max-width: 250px;
+    }
+}
+
+.react-datepicker-popper {
+    padding-top: 0 !important;
+}
+
+.react-datepicker__day--keyboard-selected {
+    background-color: $primary !important;
+    color:$white !important;
+}
+
+.input-icon {
+    position: absolute;
+    right: 14px;
+    top: 49%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    left: auto;
+}
+
+.date-input {
+    cursor: pointer;
+    font-weight: 600 !important;
+}
+
+.date-picker-popover {
+    .list-group {
+        .list-group-item {
+            cursor: pointer;
+            padding: 7px 20px !important;
+        }
+    }
+}
+
+.date-picker__child-popover {
+    .popover {
+        @media (max-width: 575px) {
+            left: 300px !important;
+            min-width: 200px;
+        }
+    }
+}
+
+.filter-dropdown {
+    .dropdown-menu {
+        // @media (min-width: 767px) {
+        //     inset: 100% 0 auto auto !important;
+        // }
+        // transform: unset !important;
+
+        @media (max-width: 480px) {
+            min-width: 242px !important;
+        }
+    }
+}
+
+.form-control[readonly] {
+    background-color: $white !important;
+}

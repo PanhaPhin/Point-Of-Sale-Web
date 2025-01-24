@@ -1,0 +1,12 @@
+@import "variables";
+.breadcrumb-item {
+    + .breadcrumb-item {
+        &::before {
+            opacity: 0.65;
+        }
+    }
+
+    a {
+        color: $gray-900;
+    }
+}

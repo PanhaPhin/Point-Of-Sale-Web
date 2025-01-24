@@ -1,0 +1,20 @@
+@import "variables";
+
+.modal-header {
+    position: relative;
+
+    &:after {
+        content: "";
+        position: absolute;
+        border-bottom: 0.063rem solid $gray-200;
+        width: calc(100% - 3.75rem);
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+}
+
+.modal-footer {
+    padding: $modal-inner-padding;
+}

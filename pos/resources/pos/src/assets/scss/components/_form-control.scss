@@ -1,0 +1,26 @@
+@import "variables";
+
+.required {
+    &:after {
+        content: "*";
+        position: relative;
+        font-size: inherit;
+        color: $danger;
+        font-weight: bold;
+    }
+}
+
+.form-switch .form-check-input {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23ffffff'/%3e%3c/svg%3e") !important;
+    &:checked {
+        background-color: $primary !important;
+    }
+}
+
+.form-check-label {
+    font-size: $form-label-font-size;
+}
+
+.form-select {
+    background-size: 18px 20px;
+}

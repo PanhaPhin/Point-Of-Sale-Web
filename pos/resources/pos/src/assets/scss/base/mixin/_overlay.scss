@@ -1,0 +1,39 @@
+@mixin bg-overly {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: 109;
+    background-color: rgba(0, 0, 0, 0.2);
+    animation: animation-drawer-fade-in 0.3s ease-in-out 1;
+    display: none;
+}
+
+@mixin after-border-bottom {
+    content: "";
+    position: absolute;
+    border-bottom: 0.125rem solid transparent;
+    width: 100%;
+    display: inline-block;
+    left: 0;
+    right: 0;
+    bottom: -6px;
+    margin: auto;
+}
+
+@mixin fixed-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: $body-bg;
+    height: auto;
+    min-height: 100vh;
+    min-width: 265px;
+    width: 265px;
+    text-align: left;
+    transition: width, left, right, .3s;
+    z-index: 1009;
+}

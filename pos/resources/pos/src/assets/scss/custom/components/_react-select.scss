@@ -1,0 +1,175 @@
+.css-26l3qy-menu,
+.css-1nmdiq5-menu {
+    background-color: #fff !important;
+    border: 0 !important;
+    border-radius: 0.475rem !important;
+    box-shadow: 0 0 50px 0 rgb(82 63 105 / 10%) !important;
+    padding: 0 !important;
+    margin-top: 0 !important;
+    z-index: 999 !important;
+    color: #6c757d !important;
+}
+
+.css-26l3qy-menu .css-1n7v3ny-option,
+.css-26l3qy-menu .css-9gakcf-option,
+.css-1nmdiq5-menu .css-tr4s17-option,
+.css-1nmdiq5-menu .css-d7l1ni-option {
+    background-color: #6571ff !important;
+    cursor: pointer !important;
+}
+
+.css-26l3qy-menu .css-1n7v3ny-option:hover,
+.css-26l3qy-menu .css-1n7v3ny-option:not(:active),
+.css-1nmdiq5-menu .css-d7l1ni-option,
+.css-1nmdiq5-menu .css-d7l1ni-option:not(:active) {
+    color: #000000 !important;
+    background-color: #e0e3ff !important;
+}
+
+.css-4ljt47-MenuList {
+    border: 1px solid #ced4da !important;
+    border-radius: 0.475rem !important;
+}
+
+.css-tlfecz-indicatorContainer .css-tj5bde-Svg,
+// .css-1xc3v61-indicatorContainer .css-tj5bde-Svg,
+.css-1gtu0rj-indicatorContainer .css-tj5bde-Svg {
+    color: $gray-600 !important;
+    width: 24px !important;
+    height: 24px !important;
+}
+
+.css-1s2u09g-control:hover,
+.css-1pahdxg-control:hover,
+.css-t3ipsp-control:hover,
+.css-13cymwt-control:hover {
+    border: 1px solid #ced4da !important;
+    background-color: #ffffff !important;
+}
+
+.css-1pahdxg-control,
+.css-t3ipsp-control {
+    border-color: red !important;
+}
+
+.css-yt9ioa-option,
+.css-10wo9uf-option {
+    cursor: pointer !important;
+}
+.css-1s2u09g-control,
+.css-1pahdxg-control,
+.css-t3ipsp-control,
+.css-1insrsq-control,
+.css-13cymwt-control {
+    box-shadow: unset !important;
+    min-height: 45px !important;
+}
+
+.css-1s2u09g-control,
+.css-1pahdxg-control,
+.css-t3ipsp-control,
+.css-13cymwt-control {
+    background-color: #ffffff !important;
+    border: 1px solid #ced4da !important;
+}
+
+.css-1okebmr-indicatorSeparator,
+.css-109onse-indicatorSeparator,
+.css-1u9des2-indicatorSeparator {
+    width: unset !important;
+}
+
+.css-tlfecz-indicatorContainer,
+// .css-1xc3v61-indicatorContainer,
+.css-1gtu0rj-indicatorContainer {
+    color: hsl(0, 0%, 80%) !important;
+
+    &:hover {
+        color: hsl(0, 0%, 80%) !important;
+    }
+
+    .css-tj5bde-Svg {
+        color: #a1a5b7 !important;
+    }
+}
+
+.css-319lph-ValueContainer {
+    font-family: inherit !important;
+}
+
+.css-1s2u09g-control,
+.css-13cymwt-control,
+.css-1pahdxg-control,
+.css-t3ipsp-control,
+.css-1insrsq-control {
+    padding: 2.5px !important;
+    border-radius: 0.475rem !important;
+    height: 42px !important ;
+}
+
+.multi_select .css-1s2u09g-control {
+    height: auto !important;
+}
+
+.css-1s2u09g-control:hover,
+.css-1pahdxg-control:hover,
+.css-t3ipsp-control:hover,
+.css-13cymwt-control:hover {
+    border: 1px solid #ced4da !important;
+    background-color: #ffffff !important;
+}
+
+.css-14el2xx-placeholder,
+.css-1jqq78o-placeholder {
+    color: #6c757d !important;
+    font-family: Poppins, Helvetica, "sans-serif" !important;
+    font-size: 14px !important;
+}
+
+.css-qc6sy-singleValue {
+    color: #6c757d !important;
+    font-family: Poppins, Helvetica, "sans-serif" !important;
+    font-size: 14px !important;
+}
+
+.css-1hb7zxy-IndicatorsContainer,
+.css-1hb7zxy-IndicatorsContainer {
+    .css-tlfecz-indicatorContainer,
+    .css-1gtu0rj-indicatorContainer {
+        padding: 6px 6px 6px 0 !important;
+    }
+}
+
+.input_dropdown {
+    .form-group {
+        height: 100% !important;
+
+        .css-b62m3t-container {
+            height: 100% !important;
+
+            .css-13cymwt-control,
+            .css-t3ipsp-control {
+                height: 100% !important;
+                border-radius: 4px 0 0 4px !important;
+                border-right: none !important;
+                outline: none !important;
+                border-color: hsl(0, 0%, 80%) !important;
+                box-shadow: none !important;
+
+                // .css-1hb7zxy-IndicatorsContainer {
+                //     @media (min-width: 768px) and (max-width: 1440px) {
+                //         display: none !important;
+                //     }
+
+                //     @media (max-width: 550px) {
+                //         display: none !important;
+                //     }
+                // }
+            }
+        }
+    }
+
+    input {
+        border-radius: 0 0.313rem 0.313rem 0 !important;
+    }
+}

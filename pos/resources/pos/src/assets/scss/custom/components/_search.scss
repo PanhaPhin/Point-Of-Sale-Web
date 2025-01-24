@@ -1,0 +1,124 @@
+.custom-search {
+    font-family: Poppins, Helvetica, "sans-serif";
+
+    &:nth-child(1) {
+        position: relative !important;
+        height: 46px !important;
+    }
+
+    .wrapper {
+        z-index: 11 !important;
+        border: none !important;
+        border-radius: 0.475rem !important;
+        background-color: transparent !important;
+        box-shadow: none !important;
+        padding-left: 0 !important;
+        position: absolute !important;
+        display: flex !important;
+        color: #212121 !important;
+        font-size: 16px !important;
+        flex-direction: column !important;
+        width: 100% !important;
+
+        div:nth-child(2) {
+            font-size: 14px !important;
+            background: $white !important;
+            border: 1px solid #ced4da !important;
+            border-radius: 0.475rem !important;
+
+            > .line {
+                display: none !important;
+                background-color: #dee2e6 !important;
+                opacity: 1 !important;
+                width: calc(100% - 26px) !important;
+                border-top: 1px solid rgb(232, 234, 237) !important;
+                margin: 0px 20px 0px 14px !important;
+                padding-bottom: 4px !important;
+            }
+
+            ul {
+                padding-bottom: 0 !important;
+                font-family: Poppins, Helvetica, "sans-serif" !important;
+
+                li {
+                    position: relative !important;
+                    padding: 0.688rem 0.938rem !important;
+
+                    &:before {
+                        content: "\f002" !important;
+                        font-family: "Font Awesome 5 Free" !important;
+                        font-weight: 900 !important;
+                        -webkit-font-smoothing: antialiased !important;
+                        display: inline-block !important;
+                        font-style: normal !important;
+                        font-variant: normal !important;
+                        text-rendering: auto !important;
+                        line-height: 1 !important;
+                        color: #6C757D !important;
+                    }
+                }
+            }
+
+            .ellipsis {
+                display: flex !important;
+                align-items: center !important;
+                text-align: left !important;
+                width: 100% !important;
+                white-space: nowrap !important;
+                overflow: hidden !important;
+                text-overflow: ellipsis !important;
+
+                span {
+                    color: #6C757D !important;
+                }
+            }
+
+            .selected {
+                background-color: $primary !important;
+
+                &:first-child {
+                    border-top-left-radius: 0.475rem !important;
+                    border-top-right-radius: 0.475rem !important;
+                }
+
+                &:last-child {
+                    border-bottom-left-radius: 0.475rem !important;
+                    border-bottom-right-radius: 0.475rem !important;
+                }
+
+                &:before, .ellipsis span {
+                    color: $white !important;
+                }
+            }
+        }
+    }
+
+    input {
+        display: block !important;
+        width: 100% !important;
+        padding: 0.688rem 0.938rem !important;
+        font-size: 0.875rem !important;
+        font-weight: 400 !important;
+        line-height: 1.5 !important;
+        color: #6C757D !important;
+        background-color: #FFFFFF !important;
+        background-clip: padding-box !important;
+        border: 1px solid #CED4DA !important;
+        appearance: none !important;
+        padding-left: 42px !important;
+        border-radius: 0.475rem !important;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
+        font-family: Poppins, Helvetica, "sans-serif" !important;
+
+        &::placeholder {
+            color: #6C757D !important;
+        }
+    }
+}
+
+.react-search-icon {
+    left: 13px !important;
+    top: 15px !important;
+    z-index: 99 !important;
+    right: auto !important;
+}

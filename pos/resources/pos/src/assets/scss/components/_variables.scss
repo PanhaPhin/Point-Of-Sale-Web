@@ -1,0 +1,363 @@
+@import "helpers/fonts";
+@import "~bootstrap/scss/functions";
+@import "../base/functions/mode";
+
+$primaryFont: "Poppins", Helvetica, sans-serif;
+
+$cyan: #6571FF !default;
+$gray: #ADB5BD !default;
+$blue: #0099FB !default;
+$green: #0AC074 !default;
+$red:   #F62947 !default;
+$yellow: #FFB821 !default;
+//$white: if(isDarkMode(), #13151F, #FFFFFF) !default;
+//$black: if(isDarkMode(), #060917, #EFF3F6) !default;
+$white: #FFFFFF !default;
+$black: #060917 !default;
+$pink: #FF679B !default;
+$orange: #FF8717 !default;
+
+$primary: $cyan !default;
+$secondary: $gray !default;
+$success: $green !default;
+$info: $blue !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: if(isDarkMode(), #13151F, #EFF3F6) !default;
+$dark: if(isDarkMode(), #FFFFFF, #060917) !default;
+
+// Theme colors
+$theme-colors: (
+    "white":      $white,  // custom color type
+    "light":      $light,
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "dark":       $dark
+) !default;
+
+$min-contrast-ratio: 3;
+
+$cyan-100:  if(isDarkMode(), #262832, #E0E3FF) !default;
+$cyan-200:  if(isDarkMode(), #282D66, #C1C6FF) !default;
+$cyan-300:  if(isDarkMode(), #3D4499, #A3AAFF) !default;
+$cyan-400:  if(isDarkMode(), #515ACC, #848DFF) !default;
+$cyan-600:  if(isDarkMode(), #848DFF, #515ACC) !default;
+$cyan-700:  if(isDarkMode(), #A3AAFF, #3D4499) !default;
+$cyan-800:  if(isDarkMode(), #C1C6FF, #282D66) !default;
+$cyan-900:  if(isDarkMode(), #E0E3FF, #141733) !default;
+
+$gray-100:  if(isDarkMode(), #1D1F28, #F8F9FA) !default;
+$gray-200:  if(isDarkMode(), #262832, #E9ECEF) !default;
+$gray-300:  if(isDarkMode(), #495057, #DEE2E6) !default;
+$gray-400:  if(isDarkMode(), #6C757D, #CED4DA) !default;
+$gray-600:  if(isDarkMode(), #6C757E, #6C757D) !default;
+$gray-700:  if(isDarkMode(), #DEE2E6, #495057) !default;
+$gray-800:  if(isDarkMode(), #E9ECEF, #343A40) !default;
+$gray-900:  if(isDarkMode(), #FFFFFF, #212529) !default;
+
+$blue-100:  if(isDarkMode(), #001F32, #CCEBFE) !default;
+$blue-200:  if(isDarkMode(), #003D64, #99D6FD) !default;
+$blue-300:  if(isDarkMode(), #005C97, #66C2FD) !default;
+$blue-400:  if(isDarkMode(), #007AC9, #33ADFC) !default;
+$blue-600:  if(isDarkMode(), #33ADFC, #007AC9) !default;
+$blue-700:  if(isDarkMode(), #66C2FD, #005C97) !default;
+$blue-800:  if(isDarkMode(), #99D6FD, #003D64) !default;
+$blue-900:  if(isDarkMode(), #CCEBFE, #001F32) !default;
+
+$green-100:  if(isDarkMode(), #022617, #CEF2E3) !default;
+$green-200:  if(isDarkMode(), #044D2E, #9DE6C7) !default;
+$green-300:  if(isDarkMode(), #067346, #6CD9AC) !default;
+$green-400:  if(isDarkMode(), #089A5D, #3BCD90) !default;
+$green-600:  if(isDarkMode(), #3BCD90, #089A5D) !default;
+$green-700:  if(isDarkMode(), #6CD9AC, #067346) !default;
+$green-800:  if(isDarkMode(), #9DE6C7, #044D2E) !default;
+$green-900:  if(isDarkMode(), #CEF2E3, #022617) !default;
+
+$yellow-100: if(isDarkMode(), #332507, #FFF1D3) !default;
+$yellow-200: if(isDarkMode(), #664A0D, #FFE3A6) !default;
+$yellow-300: if(isDarkMode(), #996E14, #FFD47A) !default;
+$yellow-400: if(isDarkMode(), #CC931A, #FFC64D) !default;
+$yellow-600: if(isDarkMode(), #FFC64D, #CC931A) !default;
+$yellow-700: if(isDarkMode(), #FFD47A, #996E14) !default;
+$yellow-800: if(isDarkMode(), #FFE3A6, #664A0D) !default;
+$yellow-900: if(isDarkMode(), #FFF1D3, #332507) !default;
+
+$red-100:    if(isDarkMode(), #31080E, #FDD4DA) !default;
+$red-200:    if(isDarkMode(), #62101C, #FBA9B5) !default;
+$red-300:    if(isDarkMode(), #94192B, #FA7F91) !default;
+$red-400:    if(isDarkMode(), #C52139, #F8546C) !default;
+$red-600:    if(isDarkMode(), #F8546C, #C52139) !default;
+$red-700:    if(isDarkMode(), #FA7F91, #94192B) !default;
+$red-800:    if(isDarkMode(), #FBA9B5, #62101C) !default;
+$red-900:    if(isDarkMode(), #FDD4DA, #31080E) !default;
+
+// Light colors
+$primary-light:                     $cyan-100 !default;
+$success-light:                     $green-100 !default;
+$info-light:                        $blue-100 !default;
+$warning-light:                     $yellow-100 !default;
+$danger-light:                      $red-100 !default;
+
+$body-bg:                           if(isDarkMode(), #13151F, $white) !default;
+$page-body-bg:                      if(isDarkMode(), $black, #EFF3F7) !default;
+
+$theme-light-colors: (
+    "primary":    $primary-light,
+    "success":    $success-light,
+    "info":       $info-light,
+    "warning":    $warning-light,
+    "danger":     $danger-light,
+) !default;  // Custom variable
+
+$theme-colors-palette: (
+    "theme-white":      $body-bg,
+    "cyan-100":         $cyan-100,
+    "cyan-200":         $cyan-200,
+    "cyan-300":         $cyan-300,
+    "cyan-400":         $cyan-400,
+    "cyan-500":         $cyan,
+    "cyan-600":         $cyan-600,
+    "cyan-700":         $cyan-700,
+    "cyan-800":         $cyan-800,
+    "cyan-900":         $cyan-900,
+    "gray-100":         $gray-100,
+    "gray-200":         $gray-200,
+    "gray-300":         $gray-300,
+    "gray-400":         $gray-400,
+    "gray-500":         $gray,
+    "gray-600":         $gray-600,
+    "gray-700":         $gray-700,
+    "gray-800":         $gray-800,
+    "gray-900":         $gray-900,
+    "blue-100":         $blue-100,
+    "blue-200":         $blue-200,
+    "blue-300":         $blue-300,
+    "blue-400":         $blue-400,
+    "blue-500":         $blue,
+    "blue-600":         $blue-600,
+    "blue-700":         $blue-700,
+    "blue-800":         $blue-800,
+    "blue-900":         $blue-900,
+    "green-100":        $green-100,
+    "green-200":        $green-200,
+    "green-300":        $green-300,
+    "green-400":        $green-400,
+    "green-500":        $green,
+    "green-600":        $green-600,
+    "green-700":        $green-700,
+    "green-800":        $green-800,
+    "green-900":        $green-900,
+    "yellow-100":       $yellow-100,
+    "yellow-200":       $yellow-200,
+    "yellow-300":       $yellow-300,
+    "yellow-400":       $yellow-400,
+    "yellow-500":       $yellow,
+    "yellow-600":       $yellow-600,
+    "yellow-700":       $yellow-700,
+    "yellow-800":       $yellow-800,
+    "yellow-900":       $yellow-900,
+    "red-100":          $red-100,
+    "red-200":          $red-200,
+    "red-300":          $red-300,
+    "red-400":          $red-400,
+    "red-500":          $red,
+    "red-600":          $red-600,
+    "red-700":          $red-700,
+    "red-800":          $red-800,
+    "red-900":          $red-900,
+) !default;  // Custom variable
+
+//custom variable
+$theme-box-shadow:                  if(isDarkMode(), 0 5px 20px rgba(0, 0, 0, 0.2), 0 5px 20px rgba(173, 181, 189, 0.2)) !default;
+
+// Content Spacing
+$content-spacing: (
+    desktop:                        1.75rem, // Padding for desktop mode
+    tablet-and-mobile:              0.938rem // Padding for tablet and mobile modes
+) !default;
+
+// border-radius-variables
+$border-radius:                     0.313rem !default;
+$border-radius-sm:                  0.625rem !default;
+$border-radius-lg:                  0.938rem !default;
+
+// buttons
+$input-btn-padding-y:               0.563rem !default;
+$input-btn-padding-x:               1.563rem !default;
+$input-btn-font-size:               0.875rem !default;
+$btn-focus-box-shadow:              0 !default;
+$btn-border-radius-sm :             $border-radius !default;
+
+// close-variables
+$btn-close-focus-shadow:            none !default;
+$btn-close-color:                   $gray !default;
+$btn-close-opacity:                 1 !default;
+$btn-close-hover-opacity:           1 !default;
+
+//dropdown
+$dropdown-color:                    $gray-600 !default;
+$dropdown-border-width:             0 !default;
+$dropdown-border-radius:            0.313rem !default;
+$dropdown-bg:                       $body-bg !default;
+$dropdown-link-hover-color:         $cyan !default;
+$dropdown-link-hover-bg:            $gray-100 !default;
+$dropdown-item-padding-y:           0.625rem !default;
+$dropdown-item-padding-x:           1.875rem !default;
+
+// form control - label variables
+$form-label-color:                  $gray-800 !default;
+$form-label-font-size:              0.875rem !default;
+$form-label-font-weight:            500 !default;
+
+// form control - text input variables
+$input-bg:                          $body-bg !default;
+$input-color:                       $gray-600 !default;
+$input-font-size:                   0.875rem !default;
+$input-padding-y:                   0.688rem !default;
+$input-padding-x:                   0.938rem !default;
+$input-border-radius:               0.313rem !default;
+$input-border-color:                $gray-400 !default;
+$input-focus-border-color:          none !default;
+$input-focus-box-shadow:            none !default;
+
+// form control - select box variables
+$form-select-focus-border-color:    none !default;
+$form-select-focus-box-shadow:      none !default;
+$form-switch-width:                 2.625em !default;
+
+// form control - check box variables
+$form-check-input-width:            1.563em !default;
+$form-check-input-bg:               $gray-400 !default;
+$form-check-input-focus-border:     none !default;
+$form-check-input-focus-box-shadow: none !default;
+$form-check-input-border:           none !default;
+
+// Table Variables
+$table-color:                       $gray-600 !default;
+$table-striped-bg:                  $body-bg !default;
+$table-th-font-weight:              500 !default;
+$table-cell-padding-x:              1.313rem !default;
+$table-border-color:                $gray-200 !default;
+
+// Table Pagination Variables
+$pagination-bg:                     $page-body-bg !default;
+$pagination-disabled-bg:            $page-body-bg !default;
+$pagination-border-width:           0 !default;
+$pagination-color:                  $gray-600 !default;
+$pagination-focus-box-shadow:       0 !default;
+$pagination-hover-color:            $primary !default;
+$pagination-focus-color:            $primary !default;
+
+// progressbar
+$progress-height:                   0.5rem !default;
+$progress-border-radius:            0.25rem !default;
+
+// card variables
+$card-bg:                           $body-bg !default;
+$card-cap-bg:                       $body-bg !default;
+$card-cap-padding-y:                1.75rem !default;
+$card-cap-padding-x:                1.75rem !default;
+$card-border-width:                 0 !default;
+$card-spacer-y:                     2.5rem !default;
+$card-spacer-x:                     2.5rem !default;
+$card-border-radius:                0.625rem !default;
+$card-box-shadow:                   if(isDarkMode(), null, 0 0 20px rgba($gray, 0.1)) !default;
+
+//modal variables
+$modal-content-bg:                  $body-bg !default;
+$modal-inner-padding:               1.875rem !default;
+$modal-dialog-margin-y-sm-up:       2.5rem !default;
+$modal-header-padding-y:            1.875rem !default;
+$modal-header-padding-x:            1.875rem !default;
+$modal-content-border-radius:       0.625rem !default;
+$modal-content-border-width:        0 !default;
+$modal-content-box-shadow-xs:       $theme-box-shadow !default;
+$modal-md:                          440px !default;
+
+// alert variables
+$alert-bg-scale:                    0 !default;
+$alert-border-scale:                0 !default;
+$alert-color-scale:                 0 !default;
+$alert-border-radius:               0.625rem !default;
+
+// badges variables
+$badge-font-size:                   0.75rem !default;
+$badge-font-weight:                 400 !default;
+$badge-padding-y:                   0.344rem !default;
+$badge-padding-x:                   0.625rem !default;
+$badge-border-radius:               0.313rem !default;
+
+// nav-variables
+$nav-link-color:                    $gray-600 !default;
+$nav-link-font-size:                0.875rem !default;
+$nav-tabs-link-active-color:        $primary !default;
+
+// list-group-variables
+$list-group-bg:                     $body-bg !default;
+$list-group-border-radius:          $border-radius-sm !default;
+$list-group-item-padding-y:         0.938rem !default;
+$list-group-action-color:           $gray-900 !default;
+$list-group-border-color:           $gray-200 !default;
+
+// breadcrumb variables
+$breadcrumb-item-padding-x:         1.25rem !default;
+$breadcrumb-active-color:           $primary !default;
+$breadcrumb-font-size:              1rem !default;
+$breadcrumb-divider:                if(isDarkMode(), url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABmJLR0QA/wD/AP+gvaeTAAAA6klEQVQ4jdXTvUqDMRQG4LYKYh10EN28BW9A70DwBqqb+LeKFHc354KIY1FnN393cRNx8k5sHwdPIYRvMJn0LIGX5CGHnLRa/66wjnae1WIbGGEwQXGEMfZrwDk8+6kLdLCCz0APatGnQC8b0L0atIvHQIeYytDdWvQ+0CtMJ+gI2zXoLO4Cvc7QL2zVoDO4DfSmAe2l+zuF/jhbi2/XTVoexu2W8RGPs1OKPWQzuYT34vHJxuY8sEW8BXZYgqWDPUAbC3iN7LgUm3y9s8jm8RJZ/9dYHN6Mlk6TrBfZSRGWAGsN2WoV9ifrG4VPmQ6+Ej5TAAAAAElFTkSuQmCC'), url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABmJLR0QA/wD/AP+gvaeTAAAAjUlEQVQ4je3UoQ0CQRAF0BcuwZCQAxqgFygGxUkawmCoAAEKRwsIBB0gOcyKDcHMsefuq8mIl5/sZCmcKptrHPHEPdvvscAtitd44IV1tj/jjSYKwjK1y9EJLmixG9CiaC8P1T866qKnVBinuf233RTX1G47YGEsdCZFsZnf31fnA57jhNXX/oBNFCuWD9KOSg85zoijAAAAAElFTkSuQmCC')) !default;
+//$breadcrumb-divider:                url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABmJLR0QA/wD/AP+gvaeTAAAA6klEQVQ4jdXTvUqDMRQG4LYKYh10EN28BW9A70DwBqqb+LeKFHc354KIY1FnN393cRNx8k5sHwdPIYRvMJn0LIGX5CGHnLRa/66wjnae1WIbGGEwQXGEMfZrwDk8+6kLdLCCz0APatGnQC8b0L0atIvHQIeYytDdWvQ+0CtMJ+gI2zXoLO4Cvc7QL2zVoDO4DfSmAe2l+zuF/jhbi2/XTVoexu2W8RGPs1OKPWQzuYT34vHJxuY8sEW8BXZYgqWDPUAbC3iN7LgUm3y9s8jm8RJZ/9dYHN6Mlk6TrBfZSRGWAGsN2WoV9ifrG4VPmQ6+Ej5TAAAAAElFTkSuQmCC');
+
+// carousel-variables
+$carousel-control-next-icon-bg:     url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAA7UlEQVRoge3YsWrCUBiG4e84CL2djs4ODlo6OBUcWkuv0Ftwkg4uXoCbuHRrM9S3iyCCSUiwnvzyPZAtJP+bwOEkkpmZmZlZ1wAD4PN4DHPP0xqw4aQAJrlnagXYci5mDPAC/F6IGeeerTHgtSTmKfdsjTmmqypiQi4AjmlygxmwJ59vYFQ3Z6qJ6Ev6kvRwlafSXiFpmlJalJ3Qq7lAksRVR/onlSEppULSh6Tdbca56EfSc9Xb6BTgjehbl4qIOMsvMHdEFwDvJRFx9ln3EjEDDqFXJ+m+PnXX4SMkCXgElsCKyL+DzMzMzCyeP4aJdVovKfL6AAAAAElFTkSuQmCC') !default;
+$carousel-control-prev-icon-bg:     url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAhElEQVRIiWNgGAWjYEDA////Df///7/0////KrSyIO8/BDymiSX///9n/v///5JhaYkyuhpGNA0iDAwMJxgYGIRIsIeJgYGBH8p+zMDA4MTIyHgHWRLFDigeHAAaREuhQfQIWxBRy3Cs4U+p4ctoloL+//9fROvkaQj1AW2KilEwClAAAGvyom3rBKOdAAAAAElFTkSuQmCC') !default;
+
+// spacing utilities customization
+$spacer: 1rem !default;
+$spacers: (
+    0: 0,
+    1: ($spacer * .25), // 3.5px
+    2: ($spacer * .5), // 7px;
+    3: ($spacer * .75), // 10.5px
+    4: ($spacer * 1), // 14px
+    5: ($spacer * 1.25), // 17.5px
+    6: ($spacer * 1.5), // 21px
+    7: ($spacer * 1.75), // 24.5px
+    8: ($spacer * 2), // 28px
+    9: ($spacer * 2.25), // 31.5px
+    10: ($spacer * 2.5), // 35px
+    11: ($spacer * 2.75), // 38.5px
+    12: ($spacer * 3), // 42px
+    13: ($spacer * 3.25), // 45.5px
+    14: ($spacer * 3.5), // 49px
+    15: ($spacer * 3.75), // 52.5px
+    16: ($spacer * 4), // 55px
+    17: ($spacer * 4.25), // 58.5px
+    18: ($spacer * 4.5), // 62px
+    19: ($spacer * 4.75), // 65.5px
+    20: ($spacer * 5), // 69px
+);
+
+$font-size-base: 1rem !default;
+// font sizes
+$h1-font-size: $font-size-base * 1.375 !default; // 22 px
+$h2-font-size: $font-size-base * 1.25 !default; // 20 px
+$h3-font-size: $font-size-base * 1.125 !default; // 18 px
+$h4-font-size: $font-size-base !default; // 16 px
+$h5-font-size: $font-size-base * 0.938 !default; // 15 px
+$h6-font-size: $font-size-base * 0.875 !default; // 14 px
+$font-small: 0.75rem !default; // 12 px
+$font-big: 1.875rem !default; // 30 px
+$font-bigger: 2rem !default; // 32 px
+
+$font-weight-bold:            500 !default;
+
+// Image Sizes
+$image-sizes: (
+    mini: 50px,
+    tiny: 80px,
+    small: 100px,
+    medium: 120px
+) !default;

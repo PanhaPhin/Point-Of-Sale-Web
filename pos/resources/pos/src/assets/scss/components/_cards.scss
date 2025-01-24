@@ -1,0 +1,16 @@
+@import "variables";
+@import "../base/mixin/breakpoints";
+@import "../base/functions/get";
+
+.card-header {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@include media-breakpoint-down(lg) {
+    .card-body {
+        padding: 1.25rem
+    }
+}

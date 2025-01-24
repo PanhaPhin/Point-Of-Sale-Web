@@ -1,0 +1,106 @@
+@import "variables";
+@import "../base/mixin/breakpoints";
+@import "../base/mixin/image";
+@import "../base/functions/get";
+
+.image {
+    display: inline-block;;
+    flex-shrink: 0;
+    position: relative;
+    object-fit: cover;
+
+    @media (max-width: 575px) {
+        max-width: 120px;
+    }
+
+    // Image
+    > img {
+        width: 100%;
+        flex-shrink: 0;
+        display: inline-block;
+        object-fit: cover;
+    }
+
+    // Square
+    &.image-square {
+        &,
+        > img {
+            border-radius: 0 !important;
+        }
+    }
+
+    // Circle
+    &.image-circle {
+        &,
+        > img {
+            border-radius: 50%;
+        }
+    }
+
+    // Sizes
+    @include image-size(get($image-sizes, default));
+
+    @each $breakpoint in map-keys($grid-breakpoints) {
+        @include media-breakpoint-up($breakpoint) {
+            $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+            @each $name, $value in $image-sizes {
+                @if ($name != 'default') {
+                    &.image#{$infix}-#{$name} {
+                        @include image-size($value);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.image-picker {
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0.475rem;
+    display: inline-block;
+    position: relative;
+
+    .previewImage {
+        width: 100px;
+        height: 100px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        box-shadow: $theme-box-shadow;
+        border-radius: 0.313rem;
+        border: 0.063rem solid $gray-200;
+        background-position: center;
+    }
+
+    .picker-edit {
+        width: 25px;
+        height: 25px;
+        background-color: $body-bg;
+        box-shadow: $theme-box-shadow;
+        border: 0.063rem solid $gray-200;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: -10px;
+        right: -10px;
+
+        label {
+            cursor: pointer;
+        }
+    }
+}
+
+.object-contain {
+    object-fit: contain;
+}
+
+.object-fill {
+    object-fit: fill;
+}
+
+.object-cover {
+    object-fit: cover;
+}

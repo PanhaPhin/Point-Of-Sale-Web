@@ -1,0 +1,40 @@
+@import "variables";
+@import "../base/functions/theme-color";
+
+.badge {
+    &.badge-circle,
+    &.badge-square {
+        font-size: 0.625rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 22px;
+        min-width: 22px;
+        padding: 0 0.1rem;
+    }
+
+    &.badge-sm {
+        width: 18px;
+        height: 18px;
+        text-align: center;
+        display: inline-block;
+        padding: 4px;
+        border-radius: 50%;
+        line-height: 10px;
+    }
+
+    // Circle
+    &.badge-circle {
+        border-radius: 50%;
+        min-width: 20px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@each $name, $value in $theme-colors {
+    .bg-light-#{$name} {
+        color: $value;
+        background-color: theme-light-color($name);
+    }
+}

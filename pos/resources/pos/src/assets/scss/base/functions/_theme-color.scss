@@ -1,0 +1,6 @@
+@import "get";
+@import "../../components/variables";
+
+@function theme-light-color($key: "primary") {
+    @return get($theme-light-colors, $key);
+}

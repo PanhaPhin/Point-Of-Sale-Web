@@ -1,0 +1,10 @@
+[
+    {
+        "label": "Code 128",
+        "value": "1"
+    },
+    {
+        "label": "Code 39",
+        "value": "2"
+    }
+]

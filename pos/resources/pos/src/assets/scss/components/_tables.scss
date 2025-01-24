@@ -1,0 +1,56 @@
+@import "variables";
+
+.table.table-striped {
+    font-size: 0.875rem;
+
+    > thead {
+        > tr > th {
+            padding: 0.75rem 0.25rem 0.75rem 1.875rem;
+        }
+
+        > tr > th:last-child {
+            padding-left: 0;
+            padding-right: 1.875rem;
+        }
+    }
+
+    > :not(caption) > * > * {
+        padding: 0.938rem 0.25rem 0.938rem 1.875rem;
+        vertical-align: middle;
+        font-weight: 400;
+    }
+
+    tbody {
+        background-color: $body-bg;
+
+        tr {
+             td {
+                 &:last-child {
+                     padding-left: 0;
+                     padding-right: 1.875rem;
+                 }
+             }
+        }
+    }
+}
+
+.table {
+    > thead {
+        > tr > th {
+            text-transform: uppercase;
+            font-weight: 400;
+            background-color: $gray-100;
+            white-space: nowrap;
+        }
+    }
+}
+
+tbody {
+    border-top: none !important;
+
+    tr {
+        &:last-child td {
+            border-bottom: 0;
+        }
+    }
+}

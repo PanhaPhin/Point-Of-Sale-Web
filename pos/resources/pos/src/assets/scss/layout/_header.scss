@@ -1,0 +1,195 @@
+@import "../components/variables";
+@import "../base/mixin/overlay";
+
+.header {
+    background-color: $body-bg;
+    height: 70px;
+    padding: 0;
+    box-shadow: 0 0 20px rgba(173, 181, 189, 0.1);
+
+
+    .navbar-nav {
+        .nav-item {
+            transition: 0.3s ease;
+
+            &:first-child {
+                @media (min-width: 1200px) {
+                    margin-left: 0 !important;
+                }
+            }
+
+            &:last-child {
+                @media (min-width: 1200px) {
+                    margin-right: 0 !important;
+                }
+            }
+
+            @media (max-width: 1500px) and (min-width: 1400px){
+                margin-right: 8px !important;
+                margin-left: 8px !important;
+            }
+
+            @media (max-width: 1399px) and (min-width: 1200px) {
+                margin-right: 4px !important;
+                margin-left: 4px !important;
+            }
+
+            .nav-link {
+                color: $gray-600;
+
+                @media (max-width: 1399px) and (min-width: 1200px) {
+                    font-size: 0.781rem;
+                }
+
+                &:after {
+                    @include after-border-bottom
+                }
+            }
+
+            &:hover {
+                .nav-link {
+                    color: $gray-900;
+
+                    &:after {
+                        border-bottom-color: $cyan;
+                    }
+                }
+            }
+
+            .active.nav-link {
+                color: $gray-900;
+
+                &:after {
+                    border-bottom-color: $cyan;
+                }
+            }
+        }
+    }
+
+    .header-btn {
+        color: $gray-600;
+    }
+
+    .dropdown-toggle {
+        @media (max-width: 480px) {
+            font-size: 0;
+        }
+    }
+
+    .top-navbar {
+        @media (max-width: 1199px) {
+            transition: width, left, right, .3s;
+            position: fixed;
+            right: -265px;
+            top: 0;
+            bottom: 0;
+            width: 265px;
+            z-index: 999;
+            background: $body-bg;
+        }
+    }
+
+    .show-nav {
+        @media (max-width: 1199px) {
+            right: 0;
+        }
+    }
+}
+ // margin-left: 4px !important;
+.report-nav-item{
+    @media (max-width: 1399px) and (min-width: 1200px){
+            margin-right: 15px !important;
+            // margin-left: 4px !important;
+            min-width: 10px;
+            max-width: 71px;
+}
+}
+
+#nav-overly {
+    @media (max-width: 1199px) {
+        @include bg-overly;
+    }
+}
+
+.show-nav {
+    #nav-overly {
+        @media (max-width: 1199px) {
+            display: block;
+        }
+    }
+}
+
+.alert-badge-icon{
+    cursor: pointer;
+
+.product-alert-badge{
+    position: absolute;
+    height: 22px;
+    top: 11px;
+    font-size: 10px;
+    width: 18px;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    background-color: #f62947;
+    border: 0.2px solid white;
+    border-radius: 10px;
+    left: 7px;
+    box-shadow: 0px 0px 5px 5px rgb(0 0 0 / 6%), 0 1px 4px rgb(0 0 0 / 8%);
+
+}
+.product-alert-message{
+    left: -93px;
+    position: absolute;
+    top: 65px;
+    z-index: 1;
+    background: white;
+    border-radius: 5px;
+    width: 237px;
+    color: $gray-600 !important;
+    opacity: 0;
+    display: none;
+    margin-top: -2px;
+    transition: 0.3s all ease-in-out;
+    cursor: pointer;
+
+    a{
+        color: $gray-600 !important;
+    }
+
+    svg{
+        color: $gray-600;
+        padding: 15px;
+        background-color: #dfdfdf;
+        border-radius: 5px 0px 0px 5px;
+    }
+}
+}
+
+.alert-badge-icon:hover .product-alert-message{
+    opacity: 1 !important;
+    display: flex !important;
+}
+
+.report_dropdown {
+    @media (max-width: 1199px) {
+        display: none !important;
+    }
+}
+.top-nav-heding {
+    @media (max-width: 1199px) {
+        padding-left: 25px !important;
+    }
+}
+
+.report-nav-item{
+    @media (max-width: 1199px){
+        margin-right: 15px !important;
+        min-width: 10px;
+        max-width: 59px;
+        margin-top: -15px;
+        a{
+            font-size: 10px !important;
+        }
+}
+}

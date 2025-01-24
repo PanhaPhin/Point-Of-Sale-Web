@@ -1,0 +1,75 @@
+@import "variables";
+
+// Can use this for debug: http://almaer.com/scrollbar/debug.html
+
+html {
+    :not(pre)::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+
+    ::-webkit-scrollbar-track:vertical, ::-webkit-scrollbar-track:horizontal, ::-webkit-scrollbar-button:vertical, ::-webkit-scrollbar-button:horizontal  {
+        box-shadow: none;
+        -webkit-box-shadow: none;
+    }
+
+    /* Turn on single button up on top, and down on bottom */
+    ::-webkit-scrollbar-button:start:decrement,
+    ::-webkit-scrollbar-button:end:increment {
+        display: block;
+    }
+
+    /* Turn off the down area up on top, and up area on bottom */
+    ::-webkit-scrollbar-button:vertical:start:increment,
+    ::-webkit-scrollbar-button:vertical:end:decrement, ::-webkit-scrollbar-button:horizontal:start:increment,
+    ::-webkit-scrollbar-button:horizontal:end:decrement {
+        display: none;
+    }
+
+    /* Place The scroll down button at the bottom */
+    ::-webkit-scrollbar-button:vertical:increment, ::-webkit-scrollbar-button:horizontal:increment {
+        display: none;
+    }
+
+    /* Place The scroll up button at the up */
+    ::-webkit-scrollbar-button:vertical:decrement, ::-webkit-scrollbar-button:horizontal:decrement {
+        display: none;
+    }
+
+    ::-webkit-scrollbar-track:vertical, ::-webkit-scrollbar-track:horizontal {
+        background-color: transparent;
+    }
+
+    /* Top area above thumb and below up button */
+    ::-webkit-scrollbar-track-piece:vertical:start, ::-webkit-scrollbar-track-piece:horizontal:start {
+        border-radius: 0.188rem;
+    }
+
+    /* Bottom area below thumb and down button */
+    ::-webkit-scrollbar-track-piece:vertical:end, ::-webkit-scrollbar-track-piece:horizontal:end {
+        border-radius: 0.188rem;
+    }
+
+    /* Track below and above */
+    ::-webkit-scrollbar-track-piece:vertical, ::-webkit-scrollbar-track-piece:horizontal {
+        background-color: transparent;
+    }
+
+    /* The thumb itself */
+    ::-webkit-scrollbar-thumb:vertical, ::-webkit-scrollbar-thumb:horizontal {
+        width: 5px;
+        height: 10px;
+        background: $gray-400;
+        border-radius: 0.188rem;
+    }
+
+    /* Corner */
+    ::-webkit-scrollbar-corner:vertical, ::-webkit-scrollbar-corner:horizontal {
+        background-color: #000;
+    }
+
+    /* Resizer */
+    ::-webkit-scrollbar-resizer:vertical, ::-webkit-scrollbar-resizer:horizontal {
+        border-radius: 0.188rem;
+    }
+}

@@ -1,0 +1,247 @@
+@import "../../components/variables";
+@import "../../base/mixin/overlay";
+
+.aside-menu-container {
+    @include fixed-menu;
+
+    @media (max-width: 1199px) {
+        position: fixed;
+        width: calc(100% - 30px);
+        top: 0;
+        left: -265px;
+        max-width: 265px;
+    }
+
+    &__aside-logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+        padding: 0 1.563rem;
+        border-bottom: 0.063rem solid $gray-200;
+    }
+
+    &__aside-menubar {
+        color: $gray-600;
+    }
+
+    &__aside-search {
+        padding: 0 1.563rem;
+
+        .form-control {
+            padding-left: 1.875rem;
+            height: 40px;
+        }
+    }
+
+    &__search-icon {
+        color: $gray-600;
+        left: 10px;
+    }
+
+    .sidebar-scrolling {
+        height: calc(100% - 138px);
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    &__aside-menu {
+        .nav-item {
+            transition: color 0.2s ease, background-color 0.2s ease;
+            cursor: pointer;
+
+            &.collapse-submenu {
+                .aside-menu-collapse-icon {
+                    transform: rotate(90deg);
+                }
+            }
+
+            .nav-link {
+                border-left: 0.313rem solid transparent;
+                color: $gray-600;
+                padding-left: 1.25rem;
+                padding-right: 1.563rem;
+
+                .aside-menu-title {
+                    white-space: nowrap;
+                }
+
+                &:hover {
+                    background: $cyan-100;
+                    border-left-color: $cyan;
+                    color: $gray-900;
+                }
+            }
+
+            &.active {
+                > .nav-link {
+                    background: $cyan-100;
+                    border-left-color: $cyan;
+                    color: $gray-900;
+                }
+            }
+
+            ul.aside-submenu {
+                .nav-item {
+                    .nav-link {
+                        padding-left: 40px;
+                    }
+                }
+            }
+        }
+    }
+
+    &.collapsed-menu {
+        @media (min-width: 1200px) {
+            min-width: 80px;
+            width: 80px;
+        }
+
+        @media (max-width: 1199px) {
+            left: 0;
+        }
+
+        .nav-item {
+            .nav-link {
+                @media (min-width: 1200px) {
+                    padding-left: 1.625rem;
+                    width: 80px;
+                    min-width: 80px;
+                }
+
+                .aside-menu-title, .aside-menu-collapse-icon {
+                    @media (min-width: 1200px) {
+                        opacity: 0;
+                        transition: opacity 0.3s ease;
+                        display: none;
+                    }
+                }
+            }
+
+            &.aside-item-collapse {
+                .aside-submenu {
+                    @media (min-width: 1200px) {
+                        opacity: 0;
+                        transition: opacity 0.3s ease;
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .sidebar-logo, .search-control {
+            @media (min-width: 1200px) {
+                display: none !important;
+            }
+        }
+
+        .sidebar-scrolling {
+            @media (min-width: 1200px) {
+                height: calc(100% - 74px);
+            }
+        }
+    }
+}
+
+.horizontal-sidebar {
+    @media (max-width: 1199px) {
+        @include fixed-menu;
+        width: calc(100% - 30px);
+        left: -265px;
+        max-width: 265px;
+    }
+
+    &.collapsed-menu {
+        @media (max-width: 1199px) {
+            left: 0;
+        }
+    }
+
+    .horizontal-sidebar-logo {
+        @media (min-width: 1200px) {
+            border-right: 1px solid $gray-300;
+        }
+    }
+
+    .horizontal-menu {
+        @media (max-width: 1199px) {
+            width: 100%;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+
+            .nav-link {
+                padding-left: 0.938rem;
+                padding-right: 0.938rem;
+
+                @media (max-width: 1399px) and (min-width: 1200px) {
+                    padding-left: 0.75rem;
+                    padding-right: 0.75rem;
+                }
+
+                &:hover {
+                    color: $primary;
+
+                    .horizontal-menu-title {
+                        color: $gray-900;
+                    }
+                }
+
+                .horizontal-menu-icon {
+                    padding-right: 0.625rem;
+                }
+            }
+
+            &.active .nav-link {
+                color: $primary;
+
+                .horizontal-menu-title {
+                    color: $gray-900;
+                }
+            }
+
+            &:first-child .nav-link {
+                @media (min-width: 1200px) {
+                    padding-left: 0;
+                }
+            }
+
+            &:last-child .nav-link {
+                @media (min-width: 1200px) {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+}
+
+.header {
+    display: flex;
+    align-items: stretch;
+}
+
+.fixed-header {
+    @media (min-width: 1200px) {
+        z-index: 100;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+}
+
+#sidebar-overly, #horizontal-menubar-overly {
+    @media (max-width: 1199px) {
+        @include bg-overly;
+    }
+}
+
+.collapsed-menu {
+    #sidebar-overly, #horizontal-menubar-overly {
+        @media (max-width: 1199px) {
+            display: block;
+        }
+    }
+}

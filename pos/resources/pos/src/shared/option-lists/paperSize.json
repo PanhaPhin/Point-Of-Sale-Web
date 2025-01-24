@@ -1,0 +1,34 @@
+[
+    {
+        "label": "40 per sheet (a4) (1.799 * 1.003)",
+        "value": 1
+    },
+    {
+        "label": "30 per sheet (2.625 * 1)",
+        "value": 2
+    },
+    {
+        "label": "24 per sheet (a4) (2.48 * 1.334)",
+        "value": 3
+    },
+    {
+        "label": "20 per sheet (4 * 1)",
+        "value": 4
+    },
+    {
+        "label": "18 per sheet (a4) (2.5 * 1.835)",
+        "value": 5
+    },
+    {
+        "label": "14 per sheet (4 * 1.33)",
+        "value": 6
+    },
+    {
+        "label": "12 per sheet (a4) (2.5 * 2.834)",
+        "value": 7
+    },
+    {
+        "label": "10 per sheet (4 * 2)",
+        "value": 8
+    }
+]
